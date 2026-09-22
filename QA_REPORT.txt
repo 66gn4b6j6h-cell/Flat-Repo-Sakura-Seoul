@@ -1,0 +1,12 @@
+{
+  "js_syntax": true,
+  "prohibited_place_term_occurrences": 0,
+  "missing_assets": [],
+  "wallet_preserved": true,
+  "packing": true,
+  "city_tiles": true,
+  "rail_track": true,
+  "language": true,
+  "luggage": true,
+  "saved_and_recommended": true
+}
