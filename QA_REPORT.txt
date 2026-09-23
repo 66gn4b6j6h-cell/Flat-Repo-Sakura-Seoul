@@ -1,12 +1,15 @@
-{
-  "js_syntax": true,
-  "prohibited_place_term_occurrences": 0,
-  "missing_assets": [],
-  "wallet_preserved": true,
-  "packing": true,
-  "city_tiles": true,
-  "rail_track": true,
-  "language": true,
-  "luggage": true,
-  "saved_and_recommended": true
-}
+PASS — No Hakone
+PASS — Iyoshi removed from convenience
+PASS — Iyoshi saved place
+PASS — City image-only tiles
+PASS — Wallet visual breakdown
+PASS — Restaurant address/hours
+PASS — Hidden gems + add to itinerary
+PASS — Live translator
+PASS — Greetings/counting
+PASS — Live weather
+PASS — Live FX
+PASS — Today editing
+PASS — Sagano
+PASS — Seoul airport
+PASS — JS syntax
