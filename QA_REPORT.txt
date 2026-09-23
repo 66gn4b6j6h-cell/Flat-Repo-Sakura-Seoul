@@ -1,20 +1,21 @@
-Sakura & Seoul Journal — V4.1 QA
-Date: 2026-09-23
+Sakura & Seoul Journal V4.2 QA
 
-Surgical changes from deployed V4:
-PASS — locked Japan Home > Our Journey tile uses approved no-Hakone Fuji/pagoda artwork.
-PASS — Japan country hub removes repeated Japan heading, route text and route strip beneath hero.
-PASS — AONIYOSHI absent from source.
-PASS — city pages no longer render the separate large date-card grid.
-PASS — city artwork remains uncropped; functional illustrated date strip is rendered directly beneath it.
-PASS — city utility section uses illustrated Hotel / Vegetarian Food / Shopping / Getting Around / Luggage / Language cards.
-PASS — hotel summary is compact; full static details moved behind the hotel card.
-PASS — individual day page removes duplicate date pill and turns itinerary entries into actionable cards with map/directions.
-PASS — day page includes Getting Around, Vegetarian Food, Shopping, Optional Stops and Language actions.
-PASS — generic restaurant phrase “Check current hours before visiting” removed.
-PASS — verified current hours/address embedded for selected high-priority saved restaurants where current reliable data was verified; other entries expose Live hours & directions rather than pretending a static time is current.
-PASS — existing Ready, Food country routing and FX code retained from working V4.
-PASS — JavaScript syntax check passed (script extracted and checked with node --check).
-PASS — flat deployable repository; no private wallet import included.
+Implemented from V4.2 punch list:
+- Home: removed redundant Trip Essentials; retained Packing & Weather.
+- Home hero city strip: direct city hotspots for Osaka, Kyoto, Fuji, Tokyo, Seoul.
+- South Korea journey tile: contained with inner margin to avoid clipped artwork/text.
+- Fuji food/shop summary counts now derive from city aliases and same data.
+- Recommendations populate at city level; Hidden Gems includes Saved Maybes + Recommended Hidden Gems with Save/Add actions.
+- Packing checklist expanded by category, progress counter, persistent manual Add/Delete, Aakash/Riya/Both assignment.
+- Day editor supports add/delete/reorder and daypart changes; persists locally.
+- Today automatically follows Japan/Korea local date during the trip; outside trip dates it previews the next relevant day.
+- Oct 7 arrival corrected to ~16:50 KIX / evening flow.
+- Weather: itinerary-aware default plus Osaka/Kyoto/Uji/Nara/Fuji/Tokyo/Seoul selector.
+- Maps: route-aware A→B handoff; Google Maps Japan, NAVER Map Korea. No heavy embedded maps.
+- Getting Around: city-scoped, itinerary route cards, line/service color cues, confirmed transport exact where known, live handoff for unreserved departures.
+- Translation: normal + slow speech and romanized pronunciation for live translations/saved phrases.
+- Protected existing Ready, Food routing, FX/wallet code and locked assets.
+- No Hakone or AONIYOSHI introduced.
 
-Important: live restaurant hours can change after this build. For records without a reliable verified published schedule, the app deliberately routes to live map hours rather than storing an invented/stale schedule.
+Known technical boundary:
+Exact live platform numbers / real-time unreserved departure times cannot be safely frozen into a static GitHub Pages file without a live transit routing provider/API. V4.2 therefore shows exact confirmed booked times and hands unreserved journeys to the appropriate live mapping provider.
