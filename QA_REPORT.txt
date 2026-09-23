@@ -1,15 +1,32 @@
-PASS — No Hakone
-PASS — Iyoshi removed from convenience
-PASS — Iyoshi saved place
-PASS — City image-only tiles
-PASS — Wallet visual breakdown
-PASS — Restaurant address/hours
-PASS — Hidden gems + add to itinerary
-PASS — Live translator
-PASS — Greetings/counting
-PASS — Live weather
-PASS — Live FX
-PASS — Today editing
-PASS — Sagano
-PASS — Seoul airport
-PASS — JS syntax
+Sakura & Seoul Journal V4 QA — 2026-09-23
+
+Implemented from V3 baseline:
+- Removed duplicate Japan route renderer.
+- Corrected Home Japan journey card to the approved Fuji-based home graphic.
+- Packing & Weather appears once on Home.
+- Removed static Trip Timeline and Japan Cities Day Trips card.
+- Removed AONIYOSHI from active itinerary/readiness/source task data.
+- Japan Cities opens the four visual city cards directly.
+- City pages preserve existing approved city artwork and add date-based mini-itinerary navigation.
+- Removed redundant city Day-by-day block.
+- Added city-level Vegetarian Food, Shopping, Getting Around, Luggage and Language actions.
+- Restored hotel room/address/transit/request/status details from earlier project source data.
+- Oct 12 now includes confirmed HIKARI 702 Kyoto 10:07 → Mishima 11:57, Car 14, seats 17-D/17-E, followed by confirmed Kaneyamaen bus.
+- Oct 21 date navigation includes KE706 NRT 09:20 → ICN 11:45.
+- Home Food now opens Japan / South Korea chooser.
+- Trip Readiness rebuilt as editable local-device progress tracker with percentage and custom items.
+- Removed duplicate Travel Wallet from Trip Essentials; Wallet remains in bottom navigation.
+- FX switched to ExchangeRate-API open no-key CAD endpoint, with timestamp, cache fallback and attribution.
+- Existing wallet remains local-device only.
+
+Static checks:
+- JavaScript syntax: PASS (node --check)
+- AONIYOSHI occurrences: 0
+- 'Trip timeline' occurrences: 0
+- 'Day trips' section occurrences: 0
+- Frankfurter endpoint occurrences: 0
+- ExchangeRate-API open endpoint present: yes
+- Flat repository: yes
+
+Important limitation:
+- The approved city PNGs themselves were not regenerated or cropped. Their embedded illustrated bottom strips remain part of the locked image files. V4 adds the new functional date navigation beneath the unchanged artwork rather than destructively editing those approved PNGs.
